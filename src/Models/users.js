@@ -25,6 +25,13 @@ default:"Rwanda"
 gender:{
     type:String,
     enum:["male","female","other","prefer-not-to-say"]
+},
+
+
+role:{
+    type:String,
+    enum:["user","admin"],
+    default:"user"
 }
 
     },

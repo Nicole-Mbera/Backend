@@ -1,5 +1,6 @@
 import userInfo from "../Models/users";
 import bcrypt from "bcrypt";
+import TokenAuth from "../helpers/tokenAuth";
 
 class userContoller {
 
@@ -58,8 +59,10 @@ static async userLogin(req,res,){
 
 
     if (bcrypt.compareSync(req.body.password, user.password)){
+        user.password=null;
+        const token= TokenAuth.tokenGenerator({user:user});
 
-        return res.status(200).json ({message:"successfully logged in"});
+        return res.status(200).json ({message:"successfully logged in", token:token });
     }
 
     return res.status(400).json({error:"wrong password"});
