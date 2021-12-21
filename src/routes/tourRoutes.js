@@ -3,7 +3,7 @@ import TourContoller from "../controllers/tourController";
 import validator from "../Middlewares/validator";
 import verifyToken from "../Middlewares/verifyToken";
 import VerifyAccess from "../Middlewares/verifyAcess";
-import tourContoller from "../controllers/tourcontroller";
+import tourContoller from "../controllers/tourController";
 
 const tourRouter = express.Router();
 
