@@ -1,6 +1,6 @@
 import express from "express";
-import UserContoller from "../controllers/usercontroller";
-import DataChecker from "../Middlewares/data checker";
+import UserContoller from "../controllers/userController";
+import DataChecker from "../Middlewares/datachecker";
 import Validator from "../Middlewares/validator";
 
 
