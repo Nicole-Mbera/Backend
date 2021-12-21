@@ -20,9 +20,9 @@ app.use("/",(req,res)=> res.status(200).json({
 const dbUrl=process.env.DATABASEURL;
 
 mongoose.connect(dbUrl).then(()=> console.log("Database connected successfully"))
-
-app.listen(7000,()=>{
-    console.log (`Server is running on port 7000`)
+const port = process.env.PORT;
+app.listen(port,()=>{
+    console.log (`Server is running on port ${port}`)
 })
 
 export default app;
