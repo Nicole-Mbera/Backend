@@ -20,9 +20,15 @@ static tokenGenerator (data){
 }
 
 static decodeToken (token){
+    try{
     const data= jwt.verify(token,process.env.JWT_KEY)
-    
+
     return data;
+}
+catch (err){
+    return err;
+
+}
 }
 
 }
